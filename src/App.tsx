@@ -15,7 +15,6 @@ function App() {
     const res = await axios.get("https://geolocation-db.com/json/");
     console.log(res.data);
     setIP(res.data.IPv4);
-    setCountryCode(res.data.country_code);
     setCountryName(res.data.country_name);
     setCity(res.data.city);
     setPostal(res.data.postal);
@@ -31,14 +30,13 @@ function App() {
   return (
     <>
       <h1>Seu endereço IP é:</h1>
-      <p>{ip}</p>
-      <p>{countryCode}</p>
-      <p>{countryName}</p>
-      <p>{city}</p>
-      <p>{postal}</p>
-      <p>{latitude}</p>
-      <p>{longitude}</p>
-      <p>{state}</p>
+      <p>IPv4: {ip}</p>
+      <p>País: {countryName}</p>
+      <p>Cidade: {city}</p>
+      <p>Postal: {postal}</p>
+      <p>Latitude: {latitude}</p>
+      <p>Longitude: {longitude}</p>
+      <p>Estado: {state}</p>
     </>
   );
 }
