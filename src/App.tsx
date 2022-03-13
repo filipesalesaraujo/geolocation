@@ -29,13 +29,13 @@ function App() {
   return (
     <>
       <h1>Seu endereço IP é:</h1>
-      <p>IPv4: {ip}</p>
-      <p>País: {countryName}</p>
-      <p>Cidade: {city}</p>
-      <p>Postal: {postal}</p>
-      <p>Latitude: {latitude}</p>
-      <p>Longitude: {longitude}</p>
-      <p>Estado: {state}</p>
+      {ip !== null ? <p>IPv4: {ip}</p> : ""}
+      {countryName !== null ? <p>País: {countryName}</p> : ""}
+      {state !== null ? <p>Estado: {state}</p> : ""}
+      {city !== null ? <p>Cidade: {city}</p> : ""}
+      {postal !== null ? <p>Postal: {postal}</p> : ""}
+      {latitude !== null ? <p>Latitude: {latitude}</p> : ""}
+      {longitude !== null ? <p>Longitude: {longitude}</p> : ""}
     </>
   );
 }
