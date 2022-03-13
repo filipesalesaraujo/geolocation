@@ -3,7 +3,6 @@ import axios from "axios";
 
 function App() {
   const [ip, setIP] = useState("");
-  const [countryCode, setCountryCode] = useState("");
   const [countryName, setCountryName] = useState("");
   const [city, setCity] = useState("");
   const [postal, setPostal] = useState("");
